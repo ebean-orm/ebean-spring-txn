@@ -18,7 +18,7 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-package com.avaje.test.springsupport;
+package model.user;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,19 +26,25 @@ import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 
 /**
- * The Class Role.
+ * The Class User.
  * @since 18.05.2009
  * @author E Mc Greal
  */
 @Entity
-public class Role {
+public class User {
 	@Id
 	long oid;
 
+	private String name;
+
 	@ManyToMany
-	private Set<User> users = new HashSet<User>();
+	private Set<Role> roles = new HashSet<Role>();
+
+	@OneToOne(mappedBy="user")
+	private Account account;
 
 	/**
 	 * @return the oid
@@ -55,19 +61,45 @@ public class Role {
 	}
 
 	/**
-	 * @return the users
+	 * @return the roles
 	 */
-	public Set<User> getUsers() {
-		return users;
+	public Set<Role> getRoles() {
+		return roles;
 	}
 
 	/**
-	 * @param users the users to set
+	 * @param roles the roles to set
 	 */
-	public void setUsers(Set<User> users) {
-		this.users = users;
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
 	}
 
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
 
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the account
+	 */
+	public Account getAccount() {
+		return account;
+	}
+
+	/**
+	 * @param account the account to set
+	 */
+	public void setAccount(Account account) {
+		this.account = account;
+	}
 
 }

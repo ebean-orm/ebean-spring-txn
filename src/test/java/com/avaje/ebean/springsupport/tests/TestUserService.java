@@ -17,28 +17,32 @@
  * along with Ebean; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
-package com.avaje.test.springsupport;
+package com.avaje.ebean.springsupport.tests;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.logging.Logger;
 
+import model.user.User;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
+
+import com.avaje.ebean.springsupport.service.UserService;
 
 /**
  * Unit test for Ebean Spring Module.
  * @since 18.05.2009
  * @author E Mc Greal
  */
-@ContextConfiguration(locations={"/init-database.xml"})
-public class EbeanSpringModuleTest extends AbstractJUnit4SpringContextTests {
+@ContextConfiguration(locations={"/TestUserService.xml"})
+public class TestUserService extends AbstractJUnit4SpringContextTests {
 
 	/** The Constant logger. */
-	private final static Logger logger = Logger.getLogger(EbeanSpringModuleTest.class.getName());
+	private final static Logger logger = Logger.getLogger(TestUserService.class.getName());
 
 	/** The user service. */
 	@Autowired
@@ -47,7 +51,7 @@ public class EbeanSpringModuleTest extends AbstractJUnit4SpringContextTests {
     /**
      * Create the test case.
      */
-    public EbeanSpringModuleTest(){
+    public TestUserService(){
         super();
     }
 

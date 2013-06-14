@@ -18,14 +18,56 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-package com.avaje.test.springsupport;
+package model.user;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
- * The Interface UserService.
+ * The Class Role.
  * @since 18.05.2009
  * @author E Mc Greal
  */
-public interface UserService {
-	public void save(User user);
-	public User find(long oid);
+@Entity
+public class Role {
+	@Id
+	long oid;
+
+	@ManyToMany
+	private Set<User> users = new HashSet<User>();
+
+	/**
+	 * @return the oid
+	 */
+	public long getOid() {
+		return oid;
+	}
+
+	/**
+	 * @param oid the oid to set
+	 */
+	public void setOid(long oid) {
+		this.oid = oid;
+	}
+
+	/**
+	 * @return the users
+	 */
+	public Set<User> getUsers() {
+		return users;
+	}
+
+	/**
+	 * @param users the users to set
+	 */
+	public void setUsers(Set<User> users) {
+		this.users = users;
+	}
+
+
+
 }

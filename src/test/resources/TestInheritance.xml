@@ -9,29 +9,17 @@
            				http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
 	<import resource="classpath:default-ebean-server.xml"/>
-
-	<!-- Transaktionen via Annotation use Springs @Transactional -->
-	<tx:annotation-driven transaction-manager="transactionManager" />
-	<context:annotation-config />
-
-	<!-- The real DataSource  -->
-	<bean id="dataSource"
-		class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/jdbc/ebeantest" />
-	</bean>
-
-	<!--  Transaction Manager -->
-	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource"/>
-	</bean>
+	<import resource="classpath:default-database.xml"/>
 
 	<bean id="serverConfig" parent="defaultEbeanServerConfig">
 		<property name="name" value="test"/>
 		<property name="classes">
 			<list>
-				<value>com.avaje.test.springsupport.User</value>
-				<value>com.avaje.test.springsupport.Role</value>
-				<value>com.avaje.test.springsupport.Account</value>
+				<value>model.inheritance.CalculationResult</value>
+				<value>model.inheritance.Configuration</value>
+				<value>model.inheritance.ProductConfiguration</value>
+				<value>model.inheritance.GroupConfiguration</value>
+				<value>model.inheritance.Configurations</value>
 			</list>
 		</property>
 		<property name="dataSource" ref="dataSource"/>
@@ -45,7 +33,4 @@
 		<property name="serverConfig" ref="serverConfig"/>
 	</bean>
 
-	<bean id="userService" class="com.avaje.test.springsupport.UserServiceImpl">
-		<property name="ebeanServer" ref="ebeanServer"/>
-	</bean>
 </beans>

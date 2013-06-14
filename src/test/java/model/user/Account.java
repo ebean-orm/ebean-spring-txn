@@ -17,36 +17,31 @@
  * along with Ebean; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
-
-package com.avaje.test.springsupport;
-
-import java.util.HashSet;
-import java.util.Set;
+package model.user;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 /**
- * The Class User.
+ * The Class Account.
  * @since 18.05.2009
  * @author E Mc Greal
  */
 @Entity
-public class User {
+public class Account {
+
+	/** The oid. */
 	@Id
-	long oid;
+	private long oid;
 
-	private String name;
-
-	@ManyToMany
-	private Set<Role> roles = new HashSet<Role>();
-
-	@OneToOne(mappedBy="user")
-	private Account account;
+	/** The user. */
+	@OneToOne
+	private User user;
 
 	/**
+	 * Gets the oid.
+	 *
 	 * @return the oid
 	 */
 	public long getOid() {
@@ -54,6 +49,8 @@ public class User {
 	}
 
 	/**
+	 * Sets the oid.
+	 *
 	 * @param oid the oid to set
 	 */
 	public void setOid(long oid) {
@@ -61,45 +58,20 @@ public class User {
 	}
 
 	/**
-	 * @return the roles
+	 * Gets the user.
+	 *
+	 * @return the user
 	 */
-	public Set<Role> getRoles() {
-		return roles;
+	public User getUser() {
+		return user;
 	}
 
 	/**
-	 * @param roles the roles to set
+	 * Sets the user.
+	 *
+	 * @param user the user to set
 	 */
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
+	public void setUser(User user) {
+		this.user = user;
 	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	/**
-	 * @return the account
-	 */
-	public Account getAccount() {
-		return account;
-	}
-
-	/**
-	 * @param account the account to set
-	 */
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-
 }

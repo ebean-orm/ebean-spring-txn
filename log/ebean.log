@@ -1,0 +1,457 @@
+14:47:06.522 [main] ERROR c.a.ebean.config.PropertyMapLoader - ebean.properties not found
+14:47:06.830 [main] ERROR c.a.e.s.deploy.BeanDescriptorManager - Error in deployment
+javax.persistence.PersistenceException: Entity type class model.inheritance.ProductConfiguration is not an enhanced entity bean. Subclassing is not longer supported in Ebean
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.checkSubclass(BeanDescriptorManager.java:1482) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setEntityBeanClass(BeanDescriptorManager.java:1433) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1150) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1070) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:547) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:237) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) [classes/:na]
+	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) [classes/:na]
+	at com.avaje.ebean.springsupport.factory.EbeanServerFactoryBean.afterPropertiesSet(EbeanServerFactoryBean.java:54) [classes/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1460) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1398) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:290) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:287) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:189) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:540) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:842) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:416) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+14:47:06.954 [main] ERROR c.a.e.s.deploy.BeanDescriptorManager - Error in deployment
+javax.persistence.PersistenceException: Entity type class model.inheritance.ProductConfiguration is not an enhanced entity bean. Subclassing is not longer supported in Ebean
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.checkSubclass(BeanDescriptorManager.java:1482) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setEntityBeanClass(BeanDescriptorManager.java:1433) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1150) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1070) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:547) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:237) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) [classes/:na]
+	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) [classes/:na]
+	at com.avaje.ebean.springsupport.factory.EbeanServerFactoryBean.afterPropertiesSet(EbeanServerFactoryBean.java:54) [classes/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1460) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1398) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:290) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:287) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:189) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:540) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:842) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:416) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+14:47:06.958 [Thread-2] DEBUG c.a.e.server.lib.ShutdownManager - Shutting down
+14:49:00.261 [main] ERROR c.a.ebean.config.PropertyMapLoader - ebean.properties not found
+14:49:00.503 [main] ERROR c.a.e.s.deploy.BeanDescriptorManager - Error in deployment
+javax.persistence.PersistenceException: Entity type class model.inheritance.GroupConfiguration is not an enhanced entity bean. Subclassing is not longer supported in Ebean
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.checkSubclass(BeanDescriptorManager.java:1482) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setEntityBeanClass(BeanDescriptorManager.java:1433) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1150) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1070) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:547) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:237) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) [classes/:na]
+	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) [classes/:na]
+	at com.avaje.ebean.springsupport.factory.EbeanServerFactoryBean.afterPropertiesSet(EbeanServerFactoryBean.java:54) [classes/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1460) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1398) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:290) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:287) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:189) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:540) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:842) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:416) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+14:49:00.619 [main] ERROR c.a.e.s.deploy.BeanDescriptorManager - Error in deployment
+javax.persistence.PersistenceException: Entity type class model.inheritance.GroupConfiguration is not an enhanced entity bean. Subclassing is not longer supported in Ebean
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.checkSubclass(BeanDescriptorManager.java:1482) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setEntityBeanClass(BeanDescriptorManager.java:1433) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1150) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1070) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:547) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:237) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) [classes/:na]
+	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) [classes/:na]
+	at com.avaje.ebean.springsupport.factory.EbeanServerFactoryBean.afterPropertiesSet(EbeanServerFactoryBean.java:54) [classes/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1460) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1398) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:290) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:287) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:189) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:540) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:842) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:416) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+14:49:00.623 [Thread-2] DEBUG c.a.e.server.lib.ShutdownManager - Shutting down
+14:50:25.503 [main] ERROR c.a.ebean.config.PropertyMapLoader - ebean.properties not found
+14:50:25.747 [main] ERROR c.a.e.s.deploy.BeanDescriptorManager - Error in deployment
+javax.persistence.PersistenceException: Entity type class model.inheritance.Configurations is not an enhanced entity bean. Subclassing is not longer supported in Ebean
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.checkSubclass(BeanDescriptorManager.java:1482) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setEntityBeanClass(BeanDescriptorManager.java:1433) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1150) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1070) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:547) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:237) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) [classes/:na]
+	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) [classes/:na]
+	at com.avaje.ebean.springsupport.factory.EbeanServerFactoryBean.afterPropertiesSet(EbeanServerFactoryBean.java:54) [classes/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1460) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1398) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:290) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:287) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:189) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:540) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:842) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:416) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+14:50:25.869 [main] ERROR c.a.e.s.deploy.BeanDescriptorManager - Error in deployment
+javax.persistence.PersistenceException: Entity type class model.inheritance.Configurations is not an enhanced entity bean. Subclassing is not longer supported in Ebean
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.checkSubclass(BeanDescriptorManager.java:1482) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setEntityBeanClass(BeanDescriptorManager.java:1433) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1150) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1070) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:547) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:237) ~[classes/:na]
+	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) [classes/:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) [classes/:na]
+	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) [classes/:na]
+	at com.avaje.ebean.springsupport.factory.EbeanServerFactoryBean.afterPropertiesSet(EbeanServerFactoryBean.java:54) [classes/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1460) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1398) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:290) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:287) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:189) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:540) [spring-beans-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:842) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:416) [spring-context-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42) [junit-4.8.2.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236) [junit-4.8.2.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.0.RELEASE.jar:3.0.0.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+14:50:25.873 [Thread-2] DEBUG c.a.e.server.lib.ShutdownManager - Shutting down
+14:59:20.523 [main] ERROR c.a.ebean.config.PropertyMapLoader - ebean.properties not found
+14:59:20.831 [main] TRACE org.avaje.ebean.TXN - txn[1001] Begin
+14:59:20.836 [main] INFO  org.avaje.ebean.TXN - txn[1001] Commit
+14:59:20.839 [main] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool grow created [Ebean-test.0] size[0]
+14:59:20.839 [main] TRACE org.avaje.ebean.TXN - txn[1002] Begin
+14:59:20.867 [main] INFO  org.avaje.ebean.TXN - txn[1002] Commit
+14:59:20.924 [main] TRACE org.avaje.ebean.SQL - txn[1003] select t0.type c0, t0.ID c1, t0.name c2, t0.group_name c3, t0.configurations_ID c4 from configuration t0 where t0.type = '2'  and t0.name = ? ; --bind(x)
+14:59:20.925 [main] DEBUG org.avaje.ebean.SUM - txn[1003] FindMany type[GroupConfiguration] origin[B9yG1z.djhQh.OsFdD] exeMicros[7000] rows[0] name[] predicates[t0.name = ? ] bind[x]
+14:59:20.925 [main] TRACE org.avaje.ebean.TXN - txn[1003] Commit - query only
+14:59:20.946 [main] TRACE org.avaje.ebean.SQL - txn[1004] insert into configuration (ID, type, name, product_name, configurations_ID) values (?,?,?,?,?); --bind(1,1,PC1,null,null,)
+14:59:20.947 [main] DEBUG org.avaje.ebean.SUM - txn[1004] Inserted [ProductConfiguration] [1]
+14:59:20.947 [main] DEBUG org.avaje.ebean.TXN - txn[1004] Commit
+14:59:20.947 [main] TRACE org.avaje.ebean.SQL - txn[1005] insert into configuration (ID, type, name, group_name, configurations_ID) values (?,?,?,?,?); --bind(2,2,GC1,null,null,)
+14:59:20.948 [main] DEBUG org.avaje.ebean.SUM - txn[1005] Inserted [GroupConfiguration] [2]
+14:59:20.948 [main] DEBUG org.avaje.ebean.TXN - txn[1005] Commit
+14:59:20.951 [main] TRACE org.avaje.ebean.SQL - txn[1006] insert into calculation_result (ID, charge, product_configuration_ID, group_configuration_ID) values (?,?,?,?); --bind(1,100.0,1,2,)
+14:59:20.951 [main] DEBUG org.avaje.ebean.SUM - txn[1006] Inserted [CalculationResult] [1]
+14:59:20.951 [main] DEBUG org.avaje.ebean.TXN - txn[1006] Commit
+14:59:20.955 [main] TRACE org.avaje.ebean.SQL - txn[1007] select t0.ID c0, t0.charge c1, t2.type c2, t2.ID c3, t2.name c4, t2.product_name c5, t2.configurations_ID c6, t1.type c7, t1.ID c8, t1.name c9, t1.group_name c10, t1.configurations_ID c11 from calculation_result t0 left outer join configuration t2 on t2.ID = t0.product_configuration_ID and t2.type = '1'  left outer join configuration t1 on t1.ID = t0.group_configuration_ID and t1.type = '2'  where t0.charge = ?; --bind(100.0, )
+14:59:20.958 [main] DEBUG org.avaje.ebean.SUM - txn[1007] FindMany type[CalculationResult] origin[B9yG1z.CThuOk.OsFdD] exeMicros[3432] rows[1] name[loadResult] predicates[t0.charge = ?] bind[100.0, ]
+14:59:20.958 [main] TRACE org.avaje.ebean.TXN - txn[1007] Commit - query only
+14:59:20.963 [main] TRACE org.avaje.ebean.SQL - txn[1008] insert into configurations (ID) values (?); --bind(1,)
+14:59:20.963 [main] DEBUG org.avaje.ebean.SUM - txn[1008] Inserted [Configurations] [1]
+14:59:20.963 [main] DEBUG org.avaje.ebean.TXN - txn[1008] Commit
+14:59:20.964 [main] TRACE org.avaje.ebean.SQL - txn[1009] insert into configuration (ID, type, name, group_name, configurations_ID) values (?,?,?,?,?); --bind(3,2,null,GC1,1,)
+14:59:20.964 [main] DEBUG org.avaje.ebean.SUM - txn[1009] Inserted [GroupConfiguration] [3]
+14:59:20.964 [main] DEBUG org.avaje.ebean.TXN - txn[1009] Commit
+14:59:20.965 [main] TRACE org.avaje.ebean.SQL - txn[1010] select t0.ID c0 from configurations t0 where t0.ID = ?  ; --bind(1)
+14:59:20.965 [main] DEBUG org.avaje.ebean.SUM - txn[1010] FindBean type[Configurations] origin[B9yG1z.DaH6La.OsFdD] exeMicros[366] rows[1] bind[1]
+14:59:20.965 [main] TRACE org.avaje.ebean.TXN - txn[1010] Commit - query only
+14:59:20.967 [main] TRACE org.avaje.ebean.SQL - txn[1011] select t0.ID c0, t1.type c1, t1.ID c2, t1.name c3, t1.group_name c4, t1.configurations_ID c5 from configurations t0 left outer join configuration t1 on t1.configurations_ID = t0.ID and t1.type = '2'  where t0.ID = ?   order by t0.ID; --bind(1)
+14:59:20.967 [main] DEBUG org.avaje.ebean.SUM - txn[1011] FindMany mode[+lazy] type[Configurations] origin[B9yG1z.DaH6La.OsFdD] load[path:groupConfigurations batch:1 actual:1] exeMicros[955] rows[1:1] name[] predicates[] bind[1]
+14:59:20.967 [main] TRACE org.avaje.ebean.TXN - txn[1011] Commit - query only
+14:59:21.122 [main] WARN  c.a.e.server.ddl.CreateTableVisitor - Table name [user] is a suspected SQL reserved word for bean model.user.User
+14:59:21.122 [main] TRACE org.avaje.ebean.TXN - txn[1001] Begin
+14:59:21.123 [main] INFO  org.avaje.ebean.TXN - txn[1001] Commit
+14:59:21.123 [main] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool grow created [Ebean-test.0] size[0]
+14:59:21.123 [main] TRACE org.avaje.ebean.TXN - txn[1002] Begin
+14:59:21.133 [main] INFO  org.avaje.ebean.TXN - txn[1002] Commit
+14:59:21.134 [main] WARN  com.avaje.ebean.Ebean - Existing EbeanServer [test] is being replaced?
+14:59:21.178 [main] TRACE org.avaje.ebean.SQL - txn[s1603010829] insert into user (oid, name) values (?,?); --bind(1,ebean,)
+14:59:21.178 [main] DEBUG org.avaje.ebean.SUM - txn[s1603010829] Inserted [User] [1]
+14:59:21.180 [main] TRACE org.avaje.ebean.SQL - txn[s1603010829] delete from user_role where user_oid = ?
+14:59:21.182 [main] DEBUG org.avaje.ebean.SUM - txn[s1603010829] DeleteSql table[user_role] rows[0] bind[1, ]
+14:59:21.182 [main] INFO  org.avaje.ebean.TXN - txn[s1603010829] Commit
+14:59:21.186 [main] TRACE org.avaje.ebean.SQL - txn[s2127757367] select t0.oid c0, t0.name c1, t1.oid c2 from user t0 left outer join account t1 on t1.user_oid = t0.oid  where t0.oid = ?  ; --bind(1)
+14:59:21.186 [main] DEBUG org.avaje.ebean.SUM - txn[s2127757367] FindBean type[User] origin[B9yG1z.BzqvF3.Cd9f-T] exeMicros[1191] rows[1] bind[1]
+14:59:21.187 [main] INFO  org.avaje.ebean.TXN - txn[s2127757367] Commit
+14:59:21.192 [Thread-1] DEBUG c.a.e.server.lib.ShutdownManager - Shutting down
+14:59:21.192 [Thread-1] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool [Ebean-test] Shutting down; threadCount[1] busyCount[0]
+14:59:21.193 [Thread-1] DEBUG c.a.e.s.lib.DaemonScheduleThreadPool - DaemonScheduleThreadPool Ebean-test-periodic- shutting down...
+14:59:21.193 [Thread-1] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool [Ebean-test] Shutting down; threadCount[1] busyCount[0]
+14:59:21.193 [Thread-1] DEBUG c.a.e.s.lib.DaemonScheduleThreadPool - DaemonScheduleThreadPool Ebean-test-periodic- shutting down...
+15:00:59.707 [main] ERROR c.a.ebean.config.PropertyMapLoader - ebean.properties not found
+15:01:00.014 [main] TRACE org.avaje.ebean.TXN - txn[1001] Begin
+15:01:00.020 [main] INFO  org.avaje.ebean.TXN - txn[1001] Commit
+15:01:00.024 [main] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool grow created [Ebean-test.0] size[0]
+15:01:00.024 [main] TRACE org.avaje.ebean.TXN - txn[1002] Begin
+15:01:00.052 [main] INFO  org.avaje.ebean.TXN - txn[1002] Commit
+15:01:00.106 [main] TRACE org.avaje.ebean.SQL - txn[1003] select t0.type c0, t0.ID c1, t0.name c2, t0.group_name c3, t0.configurations_ID c4 from configuration t0 where t0.type = '2'  and t0.name = ? ; --bind(x)
+15:01:00.107 [main] DEBUG org.avaje.ebean.SUM - txn[1003] FindMany type[GroupConfiguration] origin[B9yG1z.djhQh.OsFdD] exeMicros[6882] rows[0] name[] predicates[t0.name = ? ] bind[x]
+15:01:00.107 [main] TRACE org.avaje.ebean.TXN - txn[1003] Commit - query only
+15:01:00.128 [main] TRACE org.avaje.ebean.SQL - txn[1004] insert into configuration (ID, type, name, product_name, configurations_ID) values (?,?,?,?,?); --bind(1,1,PC1,null,null,)
+15:01:00.129 [main] DEBUG org.avaje.ebean.SUM - txn[1004] Inserted [ProductConfiguration] [1]
+15:01:00.129 [main] DEBUG org.avaje.ebean.TXN - txn[1004] Commit
+15:01:00.130 [main] TRACE org.avaje.ebean.SQL - txn[1005] insert into configuration (ID, type, name, group_name, configurations_ID) values (?,?,?,?,?); --bind(2,2,GC1,null,null,)
+15:01:00.130 [main] DEBUG org.avaje.ebean.SUM - txn[1005] Inserted [GroupConfiguration] [2]
+15:01:00.130 [main] DEBUG org.avaje.ebean.TXN - txn[1005] Commit
+15:01:00.133 [main] TRACE org.avaje.ebean.SQL - txn[1006] insert into calculation_result (ID, charge, product_configuration_ID, group_configuration_ID) values (?,?,?,?); --bind(1,100.0,1,2,)
+15:01:00.133 [main] DEBUG org.avaje.ebean.SUM - txn[1006] Inserted [CalculationResult] [1]
+15:01:00.133 [main] DEBUG org.avaje.ebean.TXN - txn[1006] Commit
+15:01:00.137 [main] TRACE org.avaje.ebean.SQL - txn[1007] select t0.ID c0, t0.charge c1, t2.type c2, t2.ID c3, t2.name c4, t2.product_name c5, t2.configurations_ID c6, t1.type c7, t1.ID c8, t1.name c9, t1.group_name c10, t1.configurations_ID c11 from calculation_result t0 left outer join configuration t2 on t2.ID = t0.product_configuration_ID and t2.type = '1'  left outer join configuration t1 on t1.ID = t0.group_configuration_ID and t1.type = '2'  where t0.charge = ?; --bind(100.0, )
+15:01:00.140 [main] DEBUG org.avaje.ebean.SUM - txn[1007] FindMany type[CalculationResult] origin[B9yG1z.CThuOk.OsFdD] exeMicros[3333] rows[1] name[loadResult] predicates[t0.charge = ?] bind[100.0, ]
+15:01:00.140 [main] TRACE org.avaje.ebean.TXN - txn[1007] Commit - query only
+15:01:00.145 [main] TRACE org.avaje.ebean.SQL - txn[1008] insert into configurations (ID) values (?); --bind(1,)
+15:01:00.145 [main] DEBUG org.avaje.ebean.SUM - txn[1008] Inserted [Configurations] [1]
+15:01:00.145 [main] DEBUG org.avaje.ebean.TXN - txn[1008] Commit
+15:01:00.146 [main] TRACE org.avaje.ebean.SQL - txn[1009] insert into configuration (ID, type, name, group_name, configurations_ID) values (?,?,?,?,?); --bind(3,2,null,GC1,1,)
+15:01:00.146 [main] DEBUG org.avaje.ebean.SUM - txn[1009] Inserted [GroupConfiguration] [3]
+15:01:00.146 [main] DEBUG org.avaje.ebean.TXN - txn[1009] Commit
+15:01:00.147 [main] TRACE org.avaje.ebean.SQL - txn[1010] select t0.ID c0 from configurations t0 where t0.ID = ?  ; --bind(1)
+15:01:00.147 [main] DEBUG org.avaje.ebean.SUM - txn[1010] FindBean type[Configurations] origin[B9yG1z.DaH6La.OsFdD] exeMicros[368] rows[1] bind[1]
+15:01:00.147 [main] TRACE org.avaje.ebean.TXN - txn[1010] Commit - query only
+15:01:00.149 [main] TRACE org.avaje.ebean.SQL - txn[1011] select t0.ID c0, t1.type c1, t1.ID c2, t1.name c3, t1.group_name c4, t1.configurations_ID c5 from configurations t0 left outer join configuration t1 on t1.configurations_ID = t0.ID and t1.type = '2'  where t0.ID = ?   order by t0.ID; --bind(1)
+15:01:00.149 [main] DEBUG org.avaje.ebean.SUM - txn[1011] FindMany mode[+lazy] type[Configurations] origin[B9yG1z.DaH6La.OsFdD] load[path:groupConfigurations batch:1 actual:1] exeMicros[895] rows[1:1] name[] predicates[] bind[1]
+15:01:00.149 [main] TRACE org.avaje.ebean.TXN - txn[1011] Commit - query only
+15:01:00.310 [main] WARN  c.a.e.server.ddl.CreateTableVisitor - Table name [user] is a suspected SQL reserved word for bean model.user.User
+15:01:00.310 [main] TRACE org.avaje.ebean.TXN - txn[1001] Begin
+15:01:00.311 [main] INFO  org.avaje.ebean.TXN - txn[1001] Commit
+15:01:00.311 [main] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool grow created [Ebean-test.0] size[0]
+15:01:00.311 [main] TRACE org.avaje.ebean.TXN - txn[1002] Begin
+15:01:00.322 [main] INFO  org.avaje.ebean.TXN - txn[1002] Commit
+15:01:00.322 [main] WARN  com.avaje.ebean.Ebean - Existing EbeanServer [test] is being replaced?
+15:01:00.367 [main] TRACE org.avaje.ebean.SQL - txn[s419978666] insert into user (oid, name) values (?,?); --bind(1,ebean,)
+15:01:00.368 [main] DEBUG org.avaje.ebean.SUM - txn[s419978666] Inserted [User] [1]
+15:01:00.370 [main] TRACE org.avaje.ebean.SQL - txn[s419978666] delete from user_role where user_oid = ?
+15:01:00.371 [main] DEBUG org.avaje.ebean.SUM - txn[s419978666] DeleteSql table[user_role] rows[0] bind[1, ]
+15:01:00.372 [main] INFO  org.avaje.ebean.TXN - txn[s419978666] Commit
+15:01:00.375 [main] TRACE org.avaje.ebean.SQL - txn[s162438027] select t0.oid c0, t0.name c1, t1.oid c2 from user t0 left outer join account t1 on t1.user_oid = t0.oid  where t0.oid = ?  ; --bind(1)
+15:01:00.376 [main] DEBUG org.avaje.ebean.SUM - txn[s162438027] FindBean type[User] origin[B9yG1z.BzqvF3.Cd9f-T] exeMicros[1252] rows[1] bind[1]
+15:01:00.376 [main] INFO  org.avaje.ebean.TXN - txn[s162438027] Commit
+15:01:00.384 [Thread-1] DEBUG c.a.e.server.lib.ShutdownManager - Shutting down
+15:01:00.384 [Thread-1] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool [Ebean-test] Shutting down; threadCount[1] busyCount[0]
+15:01:00.385 [Thread-1] DEBUG c.a.e.s.lib.DaemonScheduleThreadPool - DaemonScheduleThreadPool Ebean-test-periodic- shutting down...
+15:01:00.385 [Thread-1] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool [Ebean-test] Shutting down; threadCount[1] busyCount[0]
+15:01:00.385 [Thread-1] DEBUG c.a.e.s.lib.DaemonScheduleThreadPool - DaemonScheduleThreadPool Ebean-test-periodic- shutting down...
+15:01:11.303 [main] ERROR c.a.ebean.config.PropertyMapLoader - ebean.properties not found
+15:01:11.655 [main] TRACE org.avaje.ebean.TXN - txn[1001] Begin
+15:01:11.663 [main] INFO  org.avaje.ebean.TXN - txn[1001] Commit
+15:01:11.666 [main] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool grow created [Ebean-test.0] size[0]
+15:01:11.667 [main] TRACE org.avaje.ebean.TXN - txn[1002] Begin
+15:01:11.692 [main] INFO  org.avaje.ebean.TXN - txn[1002] Commit
+15:01:11.742 [main] TRACE org.avaje.ebean.SQL - txn[1003] insert into configuration (ID, type, name, product_name, configurations_ID) values (?,?,?,?,?); --bind(1,1,PC1,null,null,)
+15:01:11.743 [main] DEBUG org.avaje.ebean.SUM - txn[1003] Inserted [ProductConfiguration] [1]
+15:01:11.743 [main] DEBUG org.avaje.ebean.TXN - txn[1003] Commit
+15:01:11.744 [main] TRACE org.avaje.ebean.SQL - txn[1004] insert into configuration (ID, type, name, group_name, configurations_ID) values (?,?,?,?,?); --bind(2,2,GC1,null,null,)
+15:01:11.744 [main] DEBUG org.avaje.ebean.SUM - txn[1004] Inserted [GroupConfiguration] [2]
+15:01:11.744 [main] DEBUG org.avaje.ebean.TXN - txn[1004] Commit
+15:01:11.747 [main] TRACE org.avaje.ebean.SQL - txn[1005] insert into calculation_result (ID, charge, product_configuration_ID, group_configuration_ID) values (?,?,?,?); --bind(1,100.0,1,2,)
+15:01:11.747 [main] DEBUG org.avaje.ebean.SUM - txn[1005] Inserted [CalculationResult] [1]
+15:01:11.747 [main] DEBUG org.avaje.ebean.TXN - txn[1005] Commit
+15:01:11.785 [main] TRACE org.avaje.ebean.SQL - txn[1006] select t0.ID c0, t0.charge c1, t2.type c2, t2.ID c3, t2.name c4, t2.product_name c5, t2.configurations_ID c6, t1.type c7, t1.ID c8, t1.name c9, t1.group_name c10, t1.configurations_ID c11 from calculation_result t0 left outer join configuration t2 on t2.ID = t0.product_configuration_ID and t2.type = '1'  left outer join configuration t1 on t1.ID = t0.group_configuration_ID and t1.type = '2'  where t0.charge = ?; --bind(100.0, )
+15:01:11.789 [main] DEBUG org.avaje.ebean.SUM - txn[1006] FindMany type[CalculationResult] origin[B9yG1z.CThuOk.Op-SH] exeMicros[6551] rows[1] name[loadResult] predicates[t0.charge = ?] bind[100.0, ]
+15:01:11.789 [main] TRACE org.avaje.ebean.TXN - txn[1006] Commit - query only
+15:01:11.793 [main] TRACE org.avaje.ebean.SQL - txn[1007] insert into configurations (ID) values (?); --bind(1,)
+15:01:11.794 [main] DEBUG org.avaje.ebean.SUM - txn[1007] Inserted [Configurations] [1]
+15:01:11.794 [main] DEBUG org.avaje.ebean.TXN - txn[1007] Commit
+15:01:11.794 [main] TRACE org.avaje.ebean.SQL - txn[1008] insert into configuration (ID, type, name, group_name, configurations_ID) values (?,?,?,?,?); --bind(3,2,null,GC1,1,)
+15:01:11.794 [main] DEBUG org.avaje.ebean.SUM - txn[1008] Inserted [GroupConfiguration] [3]
+15:01:11.794 [main] DEBUG org.avaje.ebean.TXN - txn[1008] Commit
+15:01:11.796 [main] TRACE org.avaje.ebean.SQL - txn[1009] select t0.ID c0 from configurations t0 where t0.ID = ?  ; --bind(1)
+15:01:11.796 [main] DEBUG org.avaje.ebean.SUM - txn[1009] FindBean type[Configurations] origin[B9yG1z.DaH6La.Op-SH] exeMicros[399] rows[1] bind[1]
+15:01:11.796 [main] TRACE org.avaje.ebean.TXN - txn[1009] Commit - query only
+15:01:11.801 [main] TRACE org.avaje.ebean.SQL - txn[1010] select t0.ID c0, t1.type c1, t1.ID c2, t1.name c3, t1.group_name c4, t1.configurations_ID c5 from configurations t0 left outer join configuration t1 on t1.configurations_ID = t0.ID and t1.type = '2'  where t0.ID = ?   order by t0.ID; --bind(1)
+15:01:11.801 [main] DEBUG org.avaje.ebean.SUM - txn[1010] FindMany mode[+lazy] type[Configurations] origin[B9yG1z.DaH6La.Op-SH] load[path:groupConfigurations batch:1 actual:1] exeMicros[918] rows[1:1] name[] predicates[] bind[1]
+15:01:11.801 [main] TRACE org.avaje.ebean.TXN - txn[1010] Commit - query only
+15:01:11.803 [Thread-2] DEBUG c.a.e.server.lib.ShutdownManager - Shutting down
+15:01:11.803 [Thread-2] DEBUG c.a.e.server.lib.thread.ThreadPool - ThreadPool [Ebean-test] Shutting down; threadCount[1] busyCount[0]
+15:01:11.804 [Thread-2] DEBUG c.a.e.s.lib.DaemonScheduleThreadPool - DaemonScheduleThreadPool Ebean-test-periodic- shutting down...

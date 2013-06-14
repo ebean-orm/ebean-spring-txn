@@ -17,61 +17,17 @@
  * along with Ebean; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
-package com.avaje.test.springsupport;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+package com.avaje.ebean.springsupport.service;
+
+import model.user.User;
 
 /**
- * The Class Account.
+ * The Interface UserService.
  * @since 18.05.2009
  * @author E Mc Greal
  */
-@Entity
-public class Account {
-
-	/** The oid. */
-	@Id
-	private long oid;
-
-	/** The user. */
-	@OneToOne
-	private User user;
-
-	/**
-	 * Gets the oid.
-	 *
-	 * @return the oid
-	 */
-	public long getOid() {
-		return oid;
-	}
-
-	/**
-	 * Sets the oid.
-	 *
-	 * @param oid the oid to set
-	 */
-	public void setOid(long oid) {
-		this.oid = oid;
-	}
-
-	/**
-	 * Gets the user.
-	 *
-	 * @return the user
-	 */
-	public User getUser() {
-		return user;
-	}
-
-	/**
-	 * Sets the user.
-	 *
-	 * @param user the user to set
-	 */
-	public void setUser(User user) {
-		this.user = user;
-	}
+public interface UserService {
+	public void save(User user);
+	public User find(long oid);
 }
